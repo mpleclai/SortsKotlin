@@ -1,0 +1,20 @@
+fun bubbleSort(array: IntArray){
+
+    println("Original Array: [%s]".format(array.joinToString(seperator = ", ")))
+
+    for(pass in 0 until (array.size - 1)){              //do array.size - 1 passes
+
+        for(current in 0 until (array.size - 1)) {      //for each element in array
+
+            if (array[current] > array[current + 1]) {  //if next element is greater than current, swap
+
+                val temp = array[current]
+                array[current] = array[current + 1]
+                array[current + 1] = temp
+
+            }
+        }
+    }
+
+    println("Sorted Array [%s]".format(array.joinToString(seperator = ", ")))
+}
